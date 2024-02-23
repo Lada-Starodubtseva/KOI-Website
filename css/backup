@@ -1,0 +1,473 @@
+
+/************************
+*************************
+*******Mobile-first******
+*************************
+*********************** */
+
+@media screen and (min-width: 768px) {
+ 
+  /* HEADER */
+  header ul{
+      flex-direction: row;
+      
+  }
+  /* header{
+      position: static;
+  } */
+  .menu{
+     
+      z-index: 0;
+      height: auto;
+      width: 100vw;
+      z-index: 0;
+      margin-top: 10vw;
+      /* background-color: rgb(14, 1, 22); */
+  }
+  .bouton-burger{
+  display: none;
+
+  }
+
+  #biographie{
+      margin-top: 15vw;
+  }
+
+  div p{
+      font-size: 18px;
+  }
+
+   
+ 
+}
+@media screen and (min-width: 992px) {
+ 
+  /* HEADER */
+  header ul{
+      flex-direction: row;
+      
+  }
+  /* header{
+      position: static;
+  } */
+  .menu{
+     
+      z-index: 0;
+      height: auto;
+      width: 100vw;
+      z-index: 0;
+      margin-top: 10vw;
+      /* background-color: rgb(14, 1, 22); */
+  }
+  .bouton-burger{
+  display: none;
+
+  }
+
+  #biographie{
+      margin-top: 15vw;
+  }
+
+  div p{
+      font-size: 20px;
+  }
+
+
+   
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* annimation du deplacement du cercle (rotation et translation) */
+@keyframes deplacement {
+    from {
+        transform: translatey(1em);
+        transform: translateX(0) rotateY(0deg);
+    }
+  
+    to {
+        transform: translatey(2em);
+        transform: translateX(calc(100vw)) rotateY(360deg);
+    }
+  }
+  
+  main .deplacerPoint {
+  
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4aafc1;
+    animation: deplacement 5s infinite;
+  }
+  
+  /* menu et transformation */
+  header.accueil.menu {
+    height: auto;
+    width: 100vw;
+    background-color: rgb(196 0 0 / 66%);
+    z-index: 2;
+    position: absolute;
+  
+  
+  }
+  
+  
+  /* boutton burger */
+  label {
+    position: absolute;
+    font-size: 2em;
+    color: rgb(26, 17, 18);
+    z-index: 1;
+    background: linear-gradient(to bottom, black 0%, black 20%, transparent 20%, transparent 40%, black 40%, black 60%, transparent 60%, transparent 80%, black 80%, black 100%);
+  
+    height: 2rem;
+    width: 2rem;
+    margin: 2%;
+    cursor: pointer;
+  
+    /* Effet de transition sur la rotation du bouton */
+    transition: transform 0.5s;
+  }
+  
+  /* case à cocher */
+  #boutonPrincipal {
+    display: none;
+  }
+  
+  /* annimation du menu burger */
+  #boutonPrincipal:checked~.bouton-burger {
+    transform: rotate(90deg);
+  }
+  
+  /* #boutonPrincipal:checked~main {
+    backdrop-filter: blur(5px);
+  } */
+  
+  
+  
+  
+  
+  /* *********************************
+  ************************************
+  **********    MAIN****   ***********
+  ************************************
+  ************************************ */
+  
+  main {
+    z-index: 0;
+  }
+  
+  main #nom {
+    background-color: #923d66;
+    color: white;
+    height: 10vw;
+    font-size: 20px;
+    padding-top: 1vw;
+    padding-bottom: 6vw;
+    padding-right: 2vw;
+    text-align: end;
+  }
+  
+  main p::first-line {
+    /* la première ligne de chaque texte est de 25 px */
+    font-size: 25px;
+  }
+  
+  
+  #salut {
+    background-color: #f0ede9;
+  
+  
+    border-radius: 2em;
+    height: 40vw;
+    margin-top: 5vw;
+    padding-top: 5em;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 16px;
+    text-align: center;
+  
+  }
+  
+  /* annimation du changement de couleurs des cercles */
+  @keyframes animercouleurs {
+    from {
+        background-color: #83a8c3;
+    }
+  
+    15% {
+        background-color: #4aafc1;
+    }
+  
+    35% {
+        background-color: #386396;
+    }
+  
+    55% {
+        background-color: #923d66;
+    }
+  
+    75% {
+        background-color: #e87dab;
+    }
+  
+    to {
+        background-color: #83a8c3;
+    }
+  }
+  
+  
+  #biographie {
+    background-color: #f0ede9;
+    border-radius: 2em;
+  }
+  
+  #cercles {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    background: linear-gradient(to bottom, #f0ede9 0%, #f0ede9 80%, rgb(6, 13, 36) 100%);
+  
+  }
+  /* cercle passions */
+  #passions {
+  
+    border-radius: 100%;
+    width: 40vw;
+    height: 40vw;
+    margin-left: 2em;
+  
+    animation: animercouleurs 10s ease-in-out infinite;
+  }
+  
+  #passions p {
+    padding-top: 6vw;
+    padding-left: 10vw;
+    text-align: justify;
+    margin-right: -5vw;
+  
+  }
+  /*  */
+  #projets {
+  
+    background-color: #83a8c3;
+    border-radius: 100%;
+    width: 40vw;
+    height: 40vw;
+    margin-left: 47vw;
+    margin-top: -15vw;
+  
+    animation: animercouleurs 10s 2s infinite ease-in-out;
+  
+  
+  }
+  
+  #projets p {
+  
+    padding-top: 6vw;
+    margin-right: 10vw;
+    margin-left: -5vw;
+    text-align: justify;
+  
+  }
+  /* annimation des lignes */
+  @keyframes changer-couleur-et-taille {
+    from {
+        background-color: #83a8c3;
+        transform: scaleX(30%);
+    }
+  
+    15% {
+        background-color: #4aafc1;
+        transform: scaleX(50%);
+  
+    }
+  
+    35% {
+        background-color: #386396;
+        transform: scaleX(10%);
+  
+    }
+  
+    55% {
+        background-color: #923d66;
+        transform: scaleX(20%);
+  
+    }
+  
+    75% {
+        background-color: #e87dab;
+        transform: scaleX(10%);
+  
+    }
+  
+    to {
+        background-color: #83a8c3;
+        transform: scaleX(30%);
+  
+    }
+  
+  }
+  /* première ligne */
+  #barre {
+    width: 100%;
+    height: 1vmin;
+    border: 1px solid black;
+  
+    /*Point de transformation en haut et à gauche*/
+    transform-origin: left top;
+  
+    /*Effet d'animation*/
+  
+    animation: changer-couleur-et-taille 5s infinite;
+    /* animation-iteration-count: 3; */
+    animation-fill-mode: both;
+  }
+  
+  
+  /* deuxième ligne */
+  #barre2 {
+    width: 100%;
+    height: 1vmin;
+    border: 1px solid black;
+    position: relative;
+    justify-content: right;
+    /*Point de transformation en haut et à gauche*/
+    transform-origin: right top;
+  
+    /*Effet d'animation*/
+  
+    animation: changer-couleur-et-taille 5s infinite;
+    /* animation-iteration-count: 3; */
+    animation-fill-mode: both;
+  }
+  
+  #formation {
+    flex-direction: column;
+    text-align: center;
+    color: #f0ede9;
+    height: 50em;
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  
+  #experience {
+    height: 45em;
+    flex-direction: column;
+    text-align: center;
+    color: #f0ede9;
+  
+  }
+  /* image floue */
+  #experience div:first-child {
+    background-image: url(/TP_1/medias/ordi3.jpg);
+    background-size: cover;
+  
+    filter: blur(4px);
+    height: 30em;
+  }
+  
+  /* annimation des ballons */
+  @keyframes ballon {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+        transform: translate3d(0, 150px, 0);
+    }
+  }
+  
+  
+  main section:last-child {
+    display: flex;
+  }
+  
+  /* ballon 1 */
+  .ball {
+  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4aafc1;
+    animation: ballon 0.5s alternate infinite cubic-bezier(.5, 0.05, 1, .5);
+  }
+  
+  /* ballon 2 */
+  .ball2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e87dab;
+    animation: ballon 0.5s alternate .5s infinite cubic-bezier(.5, 0.05, 1, .5);
+  }
+  
+  /* ballon 3 */
+  .ball3 {
+  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #923d66;
+    animation: ballon 0.5s alternate 1.7s infinite cubic-bezier(.5, 0.05, 1, .5);
+  }
+  
+  
+  
+  
+  footer {
+    text-align: center;
+    background-color: #83a8c3;
+    margin-top: 10em;
+  
+  }
+  
+  /* les icones du footer */
+  footer nav ul {
+    font-size: 2em;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding-top: 0.5em;
+  }
+  
+  footer nav ul i {
+    justify-content: center;
+    color: white;
+    padding: 1vw;
+  }
+  
+  footer nav ul li span {
+    display: none;
+  
+  }
+  
+  footer div {
+    font-size: 16px;
+    color: white;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  
+  

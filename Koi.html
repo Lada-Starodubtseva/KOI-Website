@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/Koi.css" rel="stylesheet">
+    <script src="/Js/Koi.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">       
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <!-- connextion aux icones  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=5.0, minimum-scale=1">
+    <title>Starodubtseva Lada TP 1</title>
+</head>
+
+
+
+<body>
+    <header>
+      
+        <div id="sidebar">
+             <div id="intro">
+                    <p>Lada Starodubtseva</p>
+                </div>
+            <input type="checkbox" id="menu-toggle"/> 
+         
+            <label for="menu-toggle"></label>
+               
+            <ul id="menu">
+                <li><a href="#Idea">Projet</a></li>
+                <li><a href="#Inspirations">Inspirations</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+             
+            
+              
+
+        </div> 
+
+        <div id="titre-deco">
+
+            <div class="title">
+                <p>Étang à koï</p>
+            </div>
+  
+        </div>
+
+    </header>
+
+    <main>
+        <!-- première section -->
+        <section id="Idea">
+          
+
+            <div id="but">
+
+                <div id="raisons">
+
+                    <p>Salut!
+                        <br>
+                        <br> Je m'appelle Lada. Je suis une étudiante motivée en Technique d'intégration multimédia, je
+                        bénéficie d'une expérience pratique dans la réalisation d'activités interactives acquise au
+                        cours de mes études. Dotée d'une grande capacité d'adaptation, je sais me montrer proactive et
+                        digne de confiance dans la réalisation de mes missions.
+                    </p>
+                </div>
+                <div class="deplacerPoint"></div>
+
+                <div id="cercles">
+                    <div id="passions" class="container">
+
+                        <p class="text">Mes passions
+                            <br> Je suis passionné par les jeux vidéo, les effets spéciaux, l'animation et la
+                            programmation. Le domaine de création de graphiques et le processus de réalisation
+                            m'intéressent à fond.
+
+                        </p>
+                    </div>
+
+
+                    <div id="projets">
+                        <p>Mes compétences
+                            <br> Certificat du cours "Urban Sketching","Analytical Sketching",
+                            "Basics of human body" (et autres). J'étudie la Suite Adobe Creative, JavaScript, HTML et
+                            CSS, Unity etc.
+
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- deuxième section -->
+        <section id="formation">
+
+            <div id="etudes" class="text">
+
+                <p>Mes études
+                    <br>
+                    <br>J'ai complété une année en techniques de graphisme et maintenant j'étudie au cégep de
+                    Maisonneuve en techniques d'intégration Multimédia. Je suis des cours de programmation, et
+                    j'acquiers des compétences en design et créativité.
+                </p>
+            </div>
+            <div id="barre"></div>
+
+        </section>
+
+        <!-- troixième section -->
+        <section id="experience">
+
+            <div class="image"></div>
+
+            <p>
+                Mon Expérience
+                <br>
+                Je cherche à améliorer mes compétences et connaitre des
+                Expériences nouvelles afin de progresser dans
+                le domaine de programmation des jeux vidéo. Malheureusement;
+                je n'ai pas encore eu l'opportunité de
+                Demontrer mon enthousiasme dans le milieu du travail mais j'envisage fortement cet événement dans le
+                Futur proche!
+                <br>
+            </p>
+            <div id="barre2"></div>
+
+        </section>
+        <!-- 4e section (annimation) -->
+        <section id="balls">
+            <div class="ball"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+        </section>
+
+    </main>
+
+
+
+
+    <footer id="contact">
+
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com/CollegeMaisonneuve" title="facebook"><span>Facebook du
+                            collège</span><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/collegemaisonneuve/" title="instagram"><span>Instagram du
+                            collège</span><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lada-starodubtseva-579b83185/"
+                        title="linkedin"><span>Linkedin</span><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.linkedin.com/school/collegedemaisonneuve/" title="Twitter"><span>Twitter du
+                            collège</span><i class="fab fa-twitter"></i></a></li>
+
+            </ul>
+
+
+        </nav>
+        <div>
+            <p>Avis de confidentialité
+
+                <br>Copyright © 2022 Starodubtseva Lada. Tous droits réservés.
+                <br> 3 800, rue Sherbrooke Est Montréal (Québec) H1X 2A2 | 514 254-7131
+
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        // empêcher le défilement de la page quand le menu est affiché
+
+        //Récupérer la case à cocher et la balise <body>
+        let leCheckBox = document.querySelector('#boutonPrincipal');
+        let leBody = document.querySelector('body');
+
+        leCheckBox.addEventListener('click', gererLeDefilement);
+
+        function gererLeDefilement() {
+            if (leCheckBox.cheched == true) {
+                leBody.style.overflow = 'hidden';
+
+            } else {
+                leBody.style.overflow = 'scroll';
+
+            }
+        }
+
+
+
+
+        //  Script qui contrôle l'état de la case à cocher pour fermer
+        // le menu quand on clique sur un bouton
+
+
+        /*Récupérer les boutons du menu*/
+        let lesBoutons = document.querySelectorAll('.menu a');
+
+
+        /*Mettre un gestionnaire d'événement sur chaque bouton avec un boucle for of*/
+        lesBoutons[0, 1, 2, 3].addEventListener('click', controlerBoutonBurger);
+
+
+        function controlerBoutonBurger(event) {
+            //verifier si le checkbox est coché
+            if (leCheckBox.checked === true) {
+                //Décocher le checkbox pour desafficher le menu
+                leCheckBox.cheched = false;
+                //retablir le defilement de la page
+                leBody.style.overflowY = 'scroll';
+
+                
+            }
+        }
+
+    </script>
+
+</body>
