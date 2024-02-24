@@ -3,6 +3,7 @@
   src: url(/fonts/adequate.extra-light.ttf);
 }
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
 html {
   scroll-behavior: smooth;
@@ -28,16 +29,39 @@ body {
   margin: 0;
 
 }
+h1 {
+  line-height: 1.2;
+  font-size: 4vw;
+  font-weight: 700;
+}
+h3 {
+  float: right;
+  line-height: .3;
+  font-size: 2.5vw;
+  font-weight: lighter;
+}
+h4 {
+  float: left;
+  margin-left: -2%;
+  font-size: 1.5vw;
+  font-weight: lighter;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0f12;
+  font-family: 'Roboto', sans-serif;
+}
 
 
 /* *********************************
 ************************************
-**********     HEADER    ***********
+**********     Intro    ***********
 ************************************
 ************************************ */
 
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
 
 header {
@@ -45,6 +69,7 @@ header {
   height: 100vh;
   position: relative;
   display: grid;
+  margin-bottom: 10%;
 
 } 
 header::before {
@@ -67,13 +92,13 @@ header::before {
   height: 20vh;
   background-color: #e32a00;
   display: grid;
-  z-index: 3;
+  z-index: 2;
 
 }
 
 #intro p{
   display: grid;
-  font-size: 16px;
+  font-size: 1.5vw;
   font-family: 'Adequate';
   color: white;
   align-self: center;
@@ -85,6 +110,7 @@ header::before {
 
 #sidebar{
   display: grid;
+  z-index: 10;
 }
 li, a {
   color: #000000;
@@ -106,46 +132,24 @@ aside {
     right: 10%;
     text-align: right;
 }
-h1 {
-    line-height: 0;
-    font-size: 4vw;
-    font-weight: 700;
-}
-h3 {
-    float: right;
-    line-height: .3;
-    font-size: 2.5vw;
-    font-weight: lighter;
-}
-h4 {
-    float: left;
-    margin-left: -2%;
-    font-size: 1.5vw;
-    font-weight: lighter;
-}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #0d0f12;
-    font-family: 'Roboto', sans-serif;
-}
 
 #menu, label:before, label:after {
-    content: " ";
-    position: absolute;
-    left: 100px;
-    width: 40px;
-    height: 5px;
-    background-color: #ffffffbd;
-    border-radius: 2px;
-    transition: .5s ease;
+  content: " ";
+  position: absolute;
+  left: 10%;
+  width: 40px;
+  height: 5px;
+  background-color: #ffffffbd;
+  border-radius: 2px;
+  transition: .5s ease;
 }
 
 label {
-    padding: 38px 70px;
-    position: fixed;
-    z-index: 4;
+  position: fixed;
+  z-index: 4;
+  padding: 0;
+  left: 10%;
 }
 label:before { top: 50px; }
 label:after { top: 70px; }
@@ -167,17 +171,17 @@ label:after { top: 70px; }
 
 #menu-toggle:checked + label:before {
     top: 60px;
-    left: 40%;
+    left: -5vw;
     transform: rotate(-45deg);
     background-color: #0d0e11;
     z-index: 2;
 }
 #menu-toggle:checked + label:after {
-    top: 60px;
-    left: 40%;
-    transform: rotate(45deg);
-    background-color: #0d0e11;
-    z-index: 2;
+  top: 60px;
+  left: -5vw;
+  transform: rotate(45deg);
+  background-color: #0d0e11;
+  z-index: 2;
 }
 #menu-toggle:checked + label + #menu {
   top: -0%;
@@ -233,7 +237,7 @@ label:after { top: 70px; }
 
 .title p{
   color: white;
-  font-size: 380%;
+  font-size: 7vw;
   font-family:
   
   'Adequate';
@@ -244,6 +248,143 @@ label:after { top: 70px; }
 
 /* *********************************
 ************************************
-**********     HEADER    ***********
+**********     Projet    ***********
 ************************************
 ************************************ */
+
+
+#Idea{
+  color: white;
+  font-family: "Adequate";
+  padding-top: 25vh;
+}
+#Idea h1{
+  line-height: 1.2;
+  font-size: 4vw;
+  font-weight: 700;
+  z-index: 3;
+  position: relative;
+  margin-bottom: -0.5vh;
+  height: 5vh;
+  width: 40vw;
+  display: grid;
+}
+
+div#raisons{
+  position: relative;
+  width: 80vw;
+  height: max-content;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+}
+
+
+/* effet sur l<image */
+#Idea div.blur{
+  width: 68vw;
+  height: 70vh;
+  z-index: 2;
+  position: absolute;
+  background: linear-gradient(45deg, rgb(13, 15, 18) 10%, rgba(13, 15, 18, 0.53) 60%, transparent 80%);
+  left: -1%;
+}
+
+/* image de la section projet */
+#raisons div.image{
+  overflow: hidden;
+  width: 65vw;
+  height: 50vh;
+  background-image: url(/media/Inspiration-2.jpg);
+  background-repeat: no-repeat;
+
+}
+
+#but{
+  display: grid;
+}
+
+#projet-expl{
+  display: grid;
+}
+
+#projet-expl p{
+  width: 50vw;
+  justify-self: end;
+  padding: 0;
+  margin-top: -5%;
+  z-index: 2;
+}
+
+#images-inspo{
+  display: flex;
+  flex-wrap: wrap;
+  place-content: space-around start;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+  width: fit-content;
+  padding-top: 20vh;
+  margin-top: 10vh;
+}
+
+#images-inspo h1{
+  position: relative;
+  width: 70vw;
+  text-align: end;
+  padding: 5vw;
+}
+
+#images-inspo img{
+  width: 35vw;
+  padding: 2%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+.container{
+  position: relative;
+  /* width: 50%; */
+  display: grid;
+  margin: 2%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.milieu {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .milieu {
+  opacity: 1;
+}
+
+@media screen and (max-width: 400px){
+
+}
