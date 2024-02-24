@@ -257,6 +257,7 @@ label:after { top: 70px; }
   color: white;
   font-family: "Adequate";
   padding-top: 25vh;
+  display: grid;
 }
 #Idea h1{
   line-height: 1.2;
@@ -300,10 +301,6 @@ div#raisons{
 
 }
 
-#but{
-  display: grid;
-}
-
 #projet-expl{
   display: grid;
 }
@@ -326,6 +323,7 @@ div#raisons{
   width: fit-content;
   padding-top: 20vh;
   margin-top: 10vh;
+  justify-content: center;
 }
 
 #images-inspo h1{
@@ -385,6 +383,120 @@ div#raisons{
   opacity: 1;
 }
 
+
+
+
+
+
+#projet{
+  color: white;
+  font-family: "Adequate";
+  padding-top: 25vh;
+  margin-top: 10vh;
+  display: grid;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#projet p{
+width: 80vw;
+}
+
+
+
+#process{
+  color: white;
+  font-family: "Adequate";
+  padding-top: 25vh;
+  margin-top: 10vh;
+  display: grid;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+#process h1{
+  color: white;
+  font-family: "Adequate";
+}
+
+#process #poissons img{
+  margin: 2%;
+  width: 40vw;
+}
+#process #etang img{
+  margin: 2%;
+  width: 40vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 400px){
 
 }
+
+
+/* *********************************
+************************************
+**********     Footer    ***********
+************************************
+************************************ */
+  
+footer {
+  text-align: center;
+  background-color: #eee7da6b;
+  border: #eee7da 2px solid;
+  margin-top: 10em;
+}
+
+/* les icones du footer */
+footer nav ul {
+  font-size: 2em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding-top: 0.5em;
+}
+
+footer nav ul i {
+  justify-content: center;
+  color: #ffffff;
+  padding: 1vw;
+}
+
+footer nav ul li span {
+  display: none;
+
+}
+
+footer div {
+  font-size: 16px;
+  color: #ffffff;
+  justify-content: center;
+}
+
+
+
+
+
